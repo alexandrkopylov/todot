@@ -6,6 +6,10 @@ var bodyParser = require('body-parser');    // pull information from HTML POST (
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
 
+var Todo = mongoose.model('Todo', {
+    text: String
+});
+
 mongoose.connect('mongodb://localhost/todo');
 
 app.use(express.static(__dirname + '/public'));
@@ -39,9 +43,7 @@ app.get('/todo', function (req, res) {
 });
 // define tables
 
-var Todo = mongoose.model('Todo', {
-    text: String
-});
+
 
 
 // starting server
