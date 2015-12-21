@@ -1,6 +1,5 @@
-﻿var http = require('http');
-var port = process.env.port || 1337;
-http.createServer(function (req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-}).listen(port);
+﻿var express = require('express');
+var app = express();
+
+app.listen(80)
+console.log("App listening on port 80");
