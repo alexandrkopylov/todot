@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost/todo');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
-    // yay!
+    console.log('OpenDatabase');
 });
 
 var Todo = mongoose.model('Todo', {
