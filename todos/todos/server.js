@@ -2,9 +2,13 @@
 var app = express();
 var port = process.env.PORT || 8080;
 var mongoose = require('mongoose');
+var passport = require('passport');
+var flash = require('connect-flash');
 var morgan = require('morgan');
 var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 
 
