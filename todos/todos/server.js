@@ -40,7 +40,7 @@ var Todo = mongoose.model('Todo', {
 //    app.use(express.cookieParser());
 
 
-require('./app/routers.js')(app,passport);
+require('./app/routes.js')(app,passport);
 
 
 // starting server
