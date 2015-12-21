@@ -30,6 +30,11 @@ var Todo = mongoose.model('Todo', {
     app.use(bodyParser.json());                                     // parse application/json
     app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
     app.use(methodOverride());
+    app.use(cookieParser());
+    app.use(flash());
+    app.use(session({secret:'sessionsecretitodo'}));
+    app.use(passport.initialize());
+    app.use(passport.session());
 //    app.use(express.cookieParser());
 
 
