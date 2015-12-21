@@ -5,15 +5,17 @@ var morgan = require('morgan');
 
 mongoose.connect('mongodb://localhost/todo');
 
+app.use(express.static(__dirname + '/public'));
+app.use(morgan('dev'));
 
 app.get('/', function (req, res) {
     console.log('Get /');
-    res.send('sss');
+    res.send('Get /');
 });
 
 app.get('/todo', function (req, res) {
     console.log('Get todo');
-    res.send('get todo');
+    res.send('Get todo');
 });
 
 var server = app.listen(8080, function () {
