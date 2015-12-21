@@ -10,9 +10,11 @@ var methodOverride = require('method-override'); // simulate DELETE and PUT (exp
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 
+var configDB = require('./config/database.js')
 
 
-mongoose.connect('mongodb://localhost/todo');
+
+mongoose.connect(configDB.url);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
