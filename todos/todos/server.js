@@ -3,7 +3,9 @@ var app = express();
 
 app.get('/', function (req, res) {
     console.log('Get /');
-    res.display('sss');
+    res.send('sss');
 });
-app.listen(8080)
-console.log("App listening on port 8080");
+
+var server = app.listen(8080, function () {
+    console.log("App listening on port 8080");
+});
