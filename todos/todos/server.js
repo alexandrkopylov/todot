@@ -2,6 +2,9 @@
 var app = express();
 var mongoose = require('mongoose');
 var morgan = require('morgan');
+var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
+var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
+
 
 mongoose.connect('mongodb://localhost/todo');
 
