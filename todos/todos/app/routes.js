@@ -3,6 +3,10 @@
  */
 module.exports = function(app,passport){
 
+    var Todo = mongoose.model('Todo', {
+        text: String
+    });
+
     app.get('/api/todos', function (req, res) {
 
         // use mongoose to get all todos in the database

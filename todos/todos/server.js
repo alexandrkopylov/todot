@@ -22,10 +22,6 @@ db.once('open', function (callback) {
     console.log('OpenDatabase');
 });
 
-var Todo = mongoose.model('Todo', {
-    text: String
-});
-
     app.use(express.static(__dirname + '/public'));
     app.use(morgan('dev'));
     app.use(bodyParser.urlencoded({ 'extended': 'true' }));         // parse application/x-www-form-urlencoded
