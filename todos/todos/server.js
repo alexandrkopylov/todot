@@ -39,15 +39,6 @@ app.get('/api/todos', function (req, res) {
     });
 });
 
-app.get('/', function (req, res) {
-    console.log('Get /');
-    res.send('Get /');
-});
-
-app.get('/todo', function (req, res) {
-    console.log('Get todo');
-    res.send('Get todo');
-});
 // define tables
 
 
