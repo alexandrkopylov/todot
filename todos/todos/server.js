@@ -1,8 +1,10 @@
 ﻿var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
+var morgan = require('morgan');
 
 mongoose.connect('mongodb://localhost/todo');
+
 
 app.get('/', function (req, res) {
     console.log('Get /');
