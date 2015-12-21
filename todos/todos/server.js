@@ -6,11 +6,18 @@ var bodyParser = require('body-parser');    // pull information from HTML POST (
 var methodOverride = require('method-override'); // simulate DELETE and PUT (express4)
 
 
+
+mongoose.connect('mongodb://localhost/todo');
+
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function (callback) {
+    // yay!
+});
+
 var Todo = mongoose.model('Todo', {
     text: String
 });
-
-mongoose.connect('mongodb://localhost/todo');
 
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
