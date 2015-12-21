@@ -25,10 +25,14 @@
 </head>
 <body ng-controller="mainController">
     <div class="container">
-
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">Profile</a></li>
+            <li role="presentation"><a href="#">Messages</a></li>
+        </ul>
         <!-- HEADER AND TODO COUNT -->
         <div class="jumbotron text-center">
-            <h1>Todo ver1 <span class="label label-info">{{ todos.length }}</span></h1>
+            <h1>Todo ver.1.0. <span class="label label-info">{{ todos.length }}</span></h1>
         </div>
 
         <!-- TODO LIST -->
