@@ -1,11 +1,8 @@
 /**
  * Created by a.kopylov on 21.12.2015.
  */
-module.exports = function(app,passport){
+module.exports = function(app,passport,Todo){
 
-    var Todo = mongoose.model('Todo', {
-        text: String
-    });
 
     app.get('/api/todos', function (req, res) {
 

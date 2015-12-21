@@ -16,6 +16,11 @@ var configDB = require('./config/database.js')
 
 mongoose.connect(configDB.url);
 
+var Todo = mongoose.model('Todo', {
+    text: String
+});
+
+
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function (callback) {
@@ -36,7 +41,7 @@ db.once('open', function (callback) {
 //    app.use(express.cookieParser());
 
 
-require('./app/routes.js')(app,passport);
+require('./app/routes.js')(app,passport,Todo);
 
 
 // starting server
