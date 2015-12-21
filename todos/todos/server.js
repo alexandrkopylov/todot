@@ -15,6 +15,19 @@ app.use(bodyParser.json());                                     // parse applica
 app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 app.use(methodOverride());
 
+app.get('/api/todos', function (req, res) {
+
+    // use mongoose to get all todos in the database
+    Todo.find(function (err, todos) {
+
+        // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+        if (err)
+            res.send(err)
+
+        res.json(todos); // return all todos in JSON format
+    });
+});
+
 app.get('/', function (req, res) {
     console.log('Get /');
     res.send('Get /');
@@ -24,7 +37,14 @@ app.get('/todo', function (req, res) {
     console.log('Get todo');
     res.send('Get todo');
 });
+// define tables
 
+var Todo = mongoose.model('Todo', {
+    text: String
+});
+
+
+// starting server
 var server = app.listen(8080, function () {
     console.log("App listening on port 8080");
 });
