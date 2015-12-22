@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "angular": "^1.4.8",
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.14.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.0",
@@ -16,6 +17,7 @@
     "express-session": "^1.12.1",
     "method-override": "^2.3.5",
     "morgan": "^1.6.1",
-    "passport": "^0.3.2"
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.0.0"
   }
 }
