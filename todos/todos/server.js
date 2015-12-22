@@ -27,6 +27,8 @@ db.once('open', function (callback) {
     console.log('OpenDatabase');
 });
 
+require('./config/passport')(passport);
+
     app.use(express.static(__dirname + '/public'));
     app.use(morgan('dev'));
     app.use(bodyParser.urlencoded({ 'extended': 'true' }));         // parse application/x-www-form-urlencoded
