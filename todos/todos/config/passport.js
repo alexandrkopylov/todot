@@ -18,7 +18,7 @@ module.exports =function(passport){
         });
     });
     passport.use(new FacebookStrategy({
-        clientID : configAuth.facebookAuth.clientId,
+        clientID : configAuth.facebookAuth.clientID,
         clientSecret : configAuth.facebookAuth.clientSecret,
         callbackURL : configAuth.facebookAuth.callbackURL
     },
