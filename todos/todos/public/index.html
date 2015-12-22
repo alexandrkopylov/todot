@@ -25,14 +25,16 @@
 </head>
 <body ng-controller="mainController">
     <div class="container">
-        <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">Profile</a></li>
-            <li role="presentation"><a href="#">Messages</a></li>
-        </ul>
+
+        <!-- Login form -->
+        <div class="jumbatron text-center">
+            <h1><span class="fa fa-lock"> Authentication</span></h1>
+            <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
+        </div>
+
         <!-- HEADER AND TODO COUNT -->
         <div class="jumbotron text-center">
-            <h1>Todo ver.1.0. <span class="label label-info">{{ todos.length }}</span></h1>
+            <h1>Todo ver.0.0.1. <span class="label label-info">{{ todos.length }}</span></h1>
         </div>
 
         <!-- TODO LIST -->
