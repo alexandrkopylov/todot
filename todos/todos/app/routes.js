@@ -54,7 +54,12 @@ module.exports = function(app,passport,Todo){
         });
     });
     app.get('/auth/facebook', passport.authenticate('facebook',{scope: 'email'}));
-    app.get('/auth/')
+    app.get('/auth/facebook/callback',
+      passport.authenticate('facebook',{
+          successRedirect : '/',
+          failureRedirect : '/'
+      })
+    );
     app.get('*', function (req, res) {
         res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
     });
