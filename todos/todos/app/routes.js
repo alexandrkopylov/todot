@@ -68,6 +68,7 @@ module.exports = function(app,passport,Todo){
     });
     app.get('/ej', function (req,res){
         res.render('index.ejs');
+        res.json({"userno":"10"});
     })
 
 };
