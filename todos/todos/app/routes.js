@@ -66,7 +66,7 @@ module.exports = function(app,passport,Todo){
         console.log('Sending indexpage');
         res.json({"userno":"20"})
     });
-    app.get('/', function (req,res){
+    app.get('/ej', function (req,res){
         res.render('index.ejs');
     })
 
