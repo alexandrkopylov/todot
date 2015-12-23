@@ -37,6 +37,7 @@ require('./config/passport')(passport);
     app.use(methodOverride());
     app.use(cookieParser());
     app.use(flash());
+    app.set('view engine', 'ejs');
     app.use(session({secret:'sessionsecretitodo'}));
     app.use(passport.initialize());
     app.use(passport.session());
