@@ -14,7 +14,8 @@ module.exports = function(app,passport,Todo){
                 res.send(err)
 
             res.json(todos); // return all todos in JSON format
-        });
+        }
+        );
     });
 
     app.post('/api/todos', function (req, res) {
@@ -62,6 +63,7 @@ module.exports = function(app,passport,Todo){
     );
     app.get('*', function (req, res) {
         res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+        res.json(user);
     });
 
 
