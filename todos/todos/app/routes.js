@@ -38,7 +38,7 @@ module.exports = function(app,passport,Todo){
 
     });
 app.post('/api/sendUno', function (req,res){
-    res.json(20);
+    res.json(Math.random()*(100-10)+10);
 })
 // delete a todo
     app.delete('/api/todos/:todo_id', function (req, res) {
