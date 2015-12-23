@@ -24,7 +24,11 @@ function mainController($scope, $http) {
                 console.log('Error: ' + data);
             });
     };
-
+    $scope.sendUno = function (){
+        $http.post('/api/sendUno')
+            .success(function (data){
+                $scope.userno=data;            })
+    }
     // delete a todo after checking it
     $scope.deleteTodo = function (id) {
         $http.delete('/api/todos/' + id)

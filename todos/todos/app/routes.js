@@ -37,7 +37,9 @@ module.exports = function(app,passport,Todo){
         });
 
     });
-
+app.post('/api/sendUno', function (req,res){
+    res.json(20);
+})
 // delete a todo
     app.delete('/api/todos/:todo_id', function (req, res) {
         Todo.remove({
