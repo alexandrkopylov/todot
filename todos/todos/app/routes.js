@@ -61,12 +61,12 @@ module.exports = function(app,passport,Todo){
           failureRedirect : '/'
       })
     );
-    app.get('*', function (req, res) {
+    app.get('/in', function (req, res) {
         res.sendFile(__dirname+'/public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
         console.log('Sending indexpage');
         res.json({"userno":"20"})
     });
-    app.get('/ej', function (req,res){
+    app.get('/', function (req,res){
         res.render('index.ejs');
     })
 
