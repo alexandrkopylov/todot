@@ -62,8 +62,9 @@ module.exports = function(app,passport,Todo){
       })
     );
     app.get('*', function (req, res) {
-        res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
         res.json(user);
+        res.sendfile('./public/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+
     });
 
 
